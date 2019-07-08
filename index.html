@@ -8,18 +8,22 @@
 </head>
 <body>
     <div id="app">
-        <span>{{message1}}</span>
-        <span>{{message2}}</span>
+        <input v-model="message1" type="text" />
+        <span>{{message1}}{{message2}}</span>
         <ul><li></li></ul>
     </div>
+    <script src="observer.js"></script>
     <script src="complie.js"></script>
     <script src="MVVM.js"></script>
     <script>
         let vm = new MVVM({
             el:'#app',
             data:{
-                message1:'hello mvvm',
-                message2:'hello mvvm2'
+                message1:'hello message1',
+                message2:'hello message2',
+                message3:{
+                    a:1
+                }
             }
         })
     </script>
